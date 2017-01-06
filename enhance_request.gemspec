@@ -1,5 +1,5 @@
 # coding: utf-8
-lib = File.expand_path("../lib", __FILE__)
+lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
@@ -18,4 +18,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'user_agent_parser', '~> 2.3'
   spec.add_dependency 'browser', '~> 2.3'
   spec.add_dependency 'addressable', '~> 2.5'
+  spec.add_dependency 'geocoder'
 end

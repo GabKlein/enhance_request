@@ -19,6 +19,14 @@ gem 'enhance_request'
 
 def append_info_to_payload(payload)
   super
-  payload.merge!(EnhanceRequest.new(request).to_hash)
+  payload.merge!(EnhanceRequest::Meta.new(request).to_hash)
+end
+```
+
+```ruby
+# geoloc.rb
+
+def geoloc(request)
+  EnhanceRequest::Location.new(request.ip).to_hash
 end
 ```
